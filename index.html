@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>
+        DBA Assignment One
+    </title>
+    <style>
+        body {
+            background-color: rgb(173, 182, 182);
+        }
+
+        #container {
+            background-color: white;
+            margin: auto;
+            width: 50%;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        div {padding: 10%;}
+
+
+        div h1 {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Dropdown button on hover & focus */
+        div h1:hover,
+        div h1:focus {
+            background-color: #2980B9;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+
+    <script>
+
+        function load() {
+            document.getElementById("tableObjectParagraph").innerHTML = "";
+        }
+
+        function show() {
+            if (document.getElementById("tableObjectParagraph").innerHTML !=
+                "") {
+                    document.getElementById("tableObjectParagraph").innerHTML =
+                "";    
+                }
+            else {
+                document.getElementById("tableObjectParagraph").innerHTML =
+                "Tables are the basic unit of data storage in an Oracle database. Data is stored in rows and columns. You define a table with a table name (such as employees) and set of columns. You give each column a column name (such as employee_id, last_name, and job_id), a datatype (such as VARCHAR2, DATE, or NUMBER), and a width. The width can be predetermined by the datatype, as in DATE. If columns are of the NUMBER datatype, define precision and scale instead of width. A row is a collection of column information corresponding to a single record. <br/>    The following are two types of tables used in the PointBase RDBMS:<hr />Base Table - a table whose data is actually stored in the database.<br/>Derived Table - a table obtained from other tables directly or indirectly through the evaluation of a query expression. <hr />Example<br /> CREATE TABLE table_name ( column1 datatype, column2 datatype, column3 datatype, .... ); <br /> The above statment creates a table with name table_name and columns column1, column2, column3, ....";
+            }
+        }
+    </script>
+</head>
+
+<body onload="load()">
+    <div id="container">
+        <header>
+            <h2>DBA Assignment</h2>
+            <h3>Name : Robel Getnet</h3>
+            <h3>ID : ATR/8654/08</h3>
+            <h3>Section one</h3>
+        </header>
+
+        <div>
+            <h1 onclick="show()">
+                Table Objects
+            </h1>
+            <p id="tableObjectParagraph">
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
