@@ -19,7 +19,9 @@
             text-align: center;
         }
 
-        div {padding: 10%;}
+        div {
+            padding: 10%;
+        }
 
 
         div h1 {
@@ -64,19 +66,38 @@
 
     <script>
 
+        var title = [
+            "Table",
+            "Index",
+            "View"
+        ];
+
+        var paragraph = [
+            "Tables are the basic unit of data storage in an Oracle database. Data is stored in rows and columns. You define a table with a table name (such as employees) and set of columns. You give each column a column name (such as employee_id, last_name, and job_id), a datatype (such as VARCHAR2, DATE, or NUMBER), and a width. The width can be predetermined by the datatype, as in DATE. If columns are of the NUMBER datatype, define precision and scale instead of width. A row is a collection of column information corresponding to a single record. <br/>    The following are two types of tables used in the PointBase RDBMS:<hr />Base Table - a table whose data is actually stored in the database.<br/>Derived Table - a table obtained from other tables directly or indirectly through the evaluation of a query expression. <hr />Example<br /> CREATE TABLE table_name ( column1 datatype, column2 datatype, column3 datatype, .... ); <br /> The above statment creates a table with name table_name and columns column1, column2, column3, ....",
+            "Indexes are optional structures associated with tables and clusters. You can create indexes on one or more columns of a table to speed SQL statement execution on that table. Just as the index in a book/document helps you locate information faster than if there were no index, an Oracle index provides a faster access path to table data. Indexes are the primary means of reducing disk I/O when properly used. You can create many indexes for a table as long as the combination of columns differs for each index. You can create more than one index using the same columns if you specify distinctly different combinations of the columns. <hr />Example <br />CREATE INDEX employees_idx1 ON employees (last_name, job_id);<br />The above statment creates index employees_idx1 on employees table for last_name, job_id consecutively.",
+            "A view is a tailored presentation of the data contained in one or more tables or other views. A view takes the output of a query and treats it as a table. Therefore, a view can be thought of as a stored query or a virtual table. You can use views in most places where a table can be used. <hr />Example <br />CREATE VIEW employees_view AS SELECT employee_id, last_name, salary, location_id FROM employees JOIN departments USING (department_id) WHERE departments.department_id = 10; <br />The employees table has several columns and numerous rows of information. If you want users to see only five of these columns or only specific rows, then you can create a view of that table for other users to access.",
+
+
+        ];
+
         function load() {
-            document.getElementById("tableObjectParagraph").innerHTML = "";
+            // document.getElementById("tableObjectParagraph").innerHTML = "";
+            for (var i = 0; i < title.length; i++) {
+                document.getElementById("innerContainer").innerHTML += "<h1 onclick=\"show(" + i + ")\">" + title[i] + "</h1><p id=\"" + title[i] +"\"></p>";
+
+            }
         }
 
-        function show() {
-            if (document.getElementById("tableObjectParagraph").innerHTML !=
+        function show(index) {
+                
+                if (document.getElementById(title[index]).innerHTML !=
                 "") {
-                    document.getElementById("tableObjectParagraph").innerHTML =
-                "";    
-                }
+                document.getElementById(title[index]).innerHTML =
+                    "";
+            }
             else {
-                document.getElementById("tableObjectParagraph").innerHTML =
-                "Tables are the basic unit of data storage in an Oracle database. Data is stored in rows and columns. You define a table with a table name (such as employees) and set of columns. You give each column a column name (such as employee_id, last_name, and job_id), a datatype (such as VARCHAR2, DATE, or NUMBER), and a width. The width can be predetermined by the datatype, as in DATE. If columns are of the NUMBER datatype, define precision and scale instead of width. A row is a collection of column information corresponding to a single record. <br/>    The following are two types of tables used in the PointBase RDBMS:<hr />Base Table - a table whose data is actually stored in the database.<br/>Derived Table - a table obtained from other tables directly or indirectly through the evaluation of a query expression. <hr />Example<br /> CREATE TABLE table_name ( column1 datatype, column2 datatype, column3 datatype, .... ); <br /> The above statment creates a table with name table_name and columns column1, column2, column3, ....";
+                document.getElementById(title[index]).innerHTML =
+                    paragraph[index];
             }
         }
     </script>
@@ -91,12 +112,7 @@
             <h3>Section one</h3>
         </header>
 
-        <div>
-            <h1 onclick="show()">
-                Table Objects
-            </h1>
-            <p id="tableObjectParagraph">
-            </p>
+        <div id="innerContainer">
         </div>
     </div>
 </body>
