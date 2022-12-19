@@ -2,12 +2,14 @@
 
 <head>
     <title>
-        Product Portfolio : Rob Jet
+        Portfolio | Robel Getnet
     </title>
     <style>
         body {
             background-color: rgb(173, 182, 182);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: monospace;
+            
+            line-height: 175%;
         }
 
         #container {
@@ -16,14 +18,52 @@
             width: 50%;
         }
 
-        header {
+        #innerContainer
+        {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .marked {
+            background-color: #708090;
+            border-radius: 5px;
+            padding: 5px;
+
+            font-weight: bold;
+            
+            color: white;
+            font-family: monospace;
+            text-decoration: none;
+        }
+
+        .marked:hover, 
+        .marked:focus
+        {
+            background-color: #2F4F4F;
+        }
+        
+        .bottom
+        {
+            margin: auto;
+            
+            font-weight: bolder;
+            font-size: 16px;
+            
             text-align: center;
         }
 
+        hr {
+            margin: 5%;
+        }
+        
+        p {
+            font-family: monospace;
+            width: 105%;
+        }
+        
         div {
             padding: 10%;
         }
-
 
         div h1 {
             background-color: #3498DB;
@@ -32,6 +72,8 @@
             font-size: 16px;
             border: none;
             cursor: pointer;
+            
+            border-radius: 10px;
         }
 
         /* Dropdown button on hover & focus */
@@ -45,15 +87,95 @@
     <script>
 
         var title = [
-            "Product One : Third Person Controller"
+            "PROFILE",
+            "SKILLS",
+            "EXPERIENCE",
+            "BADGES & CERTIFICATES",
+            "EDUCATION",
+            "CONCLUSION",
+            "ADDITIONAL SKILLS & INTERESTS"
             ];
 
         var paragraph = [
-            "<b>Setup Tutorial</b> <br /> <br /> <a href=\"https://youtu.be/5GL4-R0WTbU\">https://youtu.be/5GL4-R0WTbU</a> <br /> <hr /> <br /> <b>Demo</b> <br /> <br /> <a href=\"https://youtu.be/U2hxqdAYaqo\">https://youtu.be/U2hxqdAYaqo</a> <br /> <hr /> <br /> <b>Asset Store</b> <br /> <br /> <a href =\"http://u3d.as/1Qkn\"> http://u3d.as/1Qkn </a> <hr /> <br /> <b>Controls</b> <br /> <br /> Free/Starfe : Tab <br /> Crouch : C <br /> Sprint : Left Shift <br /> Walk : Left Ctrl"
+            "<p>Hi, I’m Robel, a Game Developer with almost 4 years of professional Game Development experience.\n" +
+            "I’ve worked on several Game Development Projects (2D, 3D, Multiplayer and Singleplayer) on the\n" +
+            "Unity Game Engine with roles such as Gameplay Programmer, Tools Developer and User Interface\n" +
+            "Programmer.\n</p>",
+            
+            "<p><ol>" +
+            "<b><li>Unity Game Engine</li></b><br/>" +
+            "<ul>" +
+            "<li>Gameplay Programming</li>" +
+            "<li>User Interface Programming</li>" +
+            "<li>Tools Programming</li>" +
+            "<li>Multiplayer Programming</li>" +
+            "<li>ECS (Entity Component System)</li>" +
+            "<li>Addressables</li>" +
+            "<li>Editor Scripting</li>" +
+            "<li>Machine Learning Agents</li>" +
+            "<li>Procedural Level and Animation generation</li>" +
+            "</ul>" +
+            "<br/><b><li>Version Control (Git & Plastic SCM) and Agile (SCRUM)</li></b><br/>" +
+            "<b><li>Firestore and/or REST API</li></b><br/>" +
+            "I’m skilled in using Firestore (Firebase’s Realtime Database solution) or a REST API for<br/>" +
+            "developing Games."
+            + "</ol></p>",
+            
+            "<p>" +
+            "<ul>" +
+            "<b><li><a class=\"marked\" target=\"_blank\" href=\"https://qenetech.com/\">Qene Technologies</a> | Gameplay Developer | Apr 2020 - Aug 2020</li></b><br/>" +
+            "I participated in developing an " +
+            "<a class=\"marked\" target=\"_blank\" href=\"https://gamesindustryafrica.com/2020/12/14/gebeta-nominated-for-app-of-the-year-award/\">Award Winning</a> digital adoption of an infamous African board\n" +
+            "game called <a class=\"marked\" target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.qenetech.gebeta&hl=en\">Gebeta/Manchala</a> (over 10k+ downloads).<br/>" +
+            "<br/>" +
+            "<b><li><a class=\"marked\" target=\"_blank\" href=\"https://www.excellerentsolutions.com/\">Excellerent Solutions</a> | Gameplay, Tools and User Interface Programmer | Apr 2020 - Jun 2022</li></b><br/>" +
+            "I was involved in developing a Competitive Mobile Multiplayer called <a class=\"marked\" target=\"_blank\" href=\"https://textracing.com/\">Text Racing</a> that uses\n" +
+            "cryptocurrency.<br/>" +
+            "<br/>" +
+            "<b><li><a class=\"marked\" target=\"_blank\" href=\"https://catheongaming.com/\">Catheon Gaming</a> | Game Tools Developer | Jun 2022 - Oct 2022</li></b><br/>" +
+            "I worked on a Popular Cross-Platform Turn Based Cross-Platform Mobile Multiplayer called\n" +
+            "<a class=\"marked\" target=\"_blank\" href=\"https://angrymals.io/\">AngryMals</a> (over 100k+ downloads) as Tools Developer.<br/>" +
+            "<br/><b><li>Freelance | Upwork | Aug 2021 - Present</li></b><br/>" +
+            "I've developed and delivered various projects and prototypes ranging from character\n" +
+            "controllers to machine learning agents. So far I’ve a 100% job success rate and a 5 star\n" +
+            "rating freelancing on my <a class=\"marked\" target=\"_blank\" href=\"https://www.upwork.com/freelancers/~019ca6d83e3185007d\">Upwork Profile</a>\n<br/>" +
+            "<br/><b><li>Personal | Jan 2018 - Present</li></b><br/>" +
+            "In my free time I’m constantly learning new and more efficient programming methods and\n" +
+            "curating tools for future developments. I maintain most of my personal projects on my\n" +
+            "<a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997\">GitHub Page</a>\n" + 
+            "<br/>"+
+            "<br/>Some noteworthy works include<br/>" +
+            "<br/>" +
+                "<ul style='line-height: 250%'>" +
+                "<li>Realistic AAA <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Third-Person\">Character Controller</a></li>" +
+                "<li>Machine Learning <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/KartRacing\">Self Driving Car Simulation</a></li>" +
+                "<li>Machine Learning <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Gasha\">Short Range Missile Defense Simulation</a></li>" +
+                "<li>A Perfect (Only one Path to Success) <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/MazeGenerator\">Procedural Maze Generator</a></li>" +
+                "<li><a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Unity-UI\">User Interface Framework</a></li>" +
+                "<li><a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Grounder\">Procedural Bipedal Grounding System</a></li>" +
+                "</ul>" +
+            "<br/>" +
+            "For more information please look at my <a class=\"marked\" target=\"_blank\" href=\"https://www.linkedin.com/in/robel-getnet-a64820165/\">LinkedIn profile</a>\n" +
+            "</ul>" +
+            "</p>",
+            
+            "<a class=\"marked\" target=\"_blank\" href=\"https://app.pluralsight.com/profile/robel-getnet\">Unity Game Development Courses: Programming Expert</a> | Pluralsight I was graded in the 100th\n" +
+            "percentile (top 1%) of those who took the test.",
+            
+            "BSC Software Engineering\n" +
+            "September 2015 – 2020 | <a class=\"marked\" target=\"_blank\" href=\"http://www.aau.edu.et/\">Addis Ababa University</a>",
+            
+            "In conclusion I would like to state I’m diligent, friendly, creative and always ready to learn more.\n" +
+            "Beyond my considerable amount of programming skill and experience, I would also like to consider\n" +
+            "myself a very quick learner.\n",
+            
+            "Can speak confidently and proficiently in English.\n" +
+            "An accomplished Gamer and " +
+            "<br/>Proud owner of the <a class=\"marked\" target=\"_blank\" href=\"https://www.playstationtrophies.org/game/god-of-war-2018/trophy/217652-chooser-of-the-slain.html\">" +
+            "Chooser of The Slain Trophy</a> on PS4 :)"
         ];
 
         function load() {
-            // document.getElementById("tableObjectParagraph").innerHTML = "";
             for (var i = 0; i < title.length; i++) {
                 document.getElementById("innerContainer").innerHTML += "<h1 onclick=\"show(" + i + ")\">" + title[i] + "</h1><p id=\"" + title[i] +"\"></p>";
 
@@ -62,7 +184,7 @@
 
         function show(index) {
                 
-                if (document.getElementById(title[index]).innerHTML !=
+                if (document.getElementById(title[index]).innerHTML !==
                 "") {
                 document.getElementById(title[index]).innerHTML =
                     "";
@@ -73,18 +195,29 @@
             }
         }
     </script>
+    <link rel="icon" href="Avatar.jpg">
 </head>
 
 <body onload="load()">
     <div id="container">
-        <header>
-            <h2>Products Portfolio</h2>
-            <h3>Rob Jet</h3>
-            <h3>Unity Developer</h3>
-            <h3>robelgetnetrg@gmail.com</h3>
+        <header id ="headers">
+            <h3> +-------------------------------+ <br/> | Robel Getnet | Game Developer | <br/> +-------------------------------+ </h3>
+            <h3>✉ robelgetnetrg@gmail.com</h3>
+            <h3><a class="marked" target="_blank" href="https://www.linkedin.com/in/robel-getnet-a64820165/">LinkedIn</a></h3>
+            <h3><a class="marked" target="_blank" href="https://github.com/rob1997">GitHub</a></h3>
         </header>
 
+        <hr/>
+        
         <div id="innerContainer">
+        
+        </div>
+        <div class="bottom">
+            Thank you for your time and consideration!
+            <br/>
+            Muchas Gracias!
+            <br/>
+            አመሰግናለው
         </div>
     </div>
 </body>
