@@ -6,12 +6,12 @@
     </title>
     <style>
         body {
-            background-color: rgb(173, 182, 182);
+            background-color: #2c343f;
             font-family: monospace;
             
             line-height: 175%;
         }
-
+        
         #container {
             background-color: white;
             margin: auto;
@@ -44,6 +44,30 @@
             background-color: #2F4F4F;
         }
         
+        .personal-content {
+            
+            width: 28%;
+            
+            padding: 0;
+            margin: 15px;
+
+            display: inline-block;
+        }
+        
+        .personal-item {
+            margin: 0;
+            padding: 0;
+            
+            width: -moz-fit-content;
+            width: fit-content;
+            
+            word-break: break-word;
+        }
+        
+        .personal-content img {
+            width: 100%;
+        }
+        
         .bottom
         {
             margin: auto;
@@ -56,11 +80,12 @@
 
         header img {
             border-radius: 50%;
+            object-fit: cover;
         }
         
         p img {
             border: 4px solid black;
-            border-radius: 10%;
+            border-radius: 10px;
             
             width: 25%;
             height: 15%;
@@ -105,6 +130,7 @@
             "PROFILE",
             "SKILLS",
             "EXPERIENCE",
+            "MY PROJECTS",
             "BADGES & CERTIFICATES",
             "EDUCATION",
             "CONCLUSION",
@@ -127,6 +153,7 @@
             "<li>ECS (Entity Component System)</li>" +
             "<li>Addressables</li>" +
             "<li>Editor Scripting</li>" +
+            "<li>SDK and Package Development</li>" +
             "<li>Machine Learning Agents</li>" +
             "<li>Procedural Level and Animation generation</li>" +
             "</ul>" +
@@ -176,25 +203,140 @@
             "I've developed and delivered various projects and prototypes ranging from character\n" +
             "controllers to machine learning agents. So far I’ve a 100% job success rate and a 5 star\n" +
             "rating freelancing on my <a class=\"marked\" target=\"_blank\" href=\"https://www.upwork.com/freelancers/~019ca6d83e3185007d\">Upwork Profile</a>\n<br/>" +
-            
-            "<br/><b><li>Personal | Jan 2018 - Present</li></b><br/>" +
+
+            "<br/>For more information please look at my <a class=\"marked\" target=\"_blank\" href=\"https://www.linkedin.com/in/robel-getnet-a64820165/\">LinkedIn profile</a><br/>",
+                    
             "In my free time I’m constantly learning new and more efficient programming methods and\n" +
             "curating tools for future developments. I maintain most of my personal projects on my\n" +
-            "<a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997\">GitHub Page</a>\n" + 
+            "<a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997\">GitHub Profile</a>\n" + 
             "<br/>"+
             "<br/>Some noteworthy works include<br/>" +
+                    
+            "<div class='personal-content'>" +
+
+                "<div class='personal-item'>" +
+                    "<b><a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Controller\">Character Controller</a></b>" +
+                        "</div>" +
+            
+                            "<hr/>" +
+                
+                            "<div class='personal-item'>" +
+                                "<img src=\"Controller_1.gif\" alt=\"Controller\"/>" +
+                            "</div>" +
+                
+                            "<hr/>" +
+            
+                        "<div class='personal-item'>" +
+                    "A Modular Third Person Shooter Controller with Locomotion, Damage, Inventory and Weapons Implemented" +
+                "</div>" +
+                    
+            "</div>" +
+            
+            "<div class='personal-content'>" +
+
+                    "<div class='personal-item'>" +
+                        
+                    "<b>Procedural Bipedal <br/> <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Grounder\">Grounding System</a></br></b>" +
+                    "</div>" +
+        
+                    "<hr/>" +
+
+                    "<div class='personal-item'>" +
+                        "<img src=\"Grounder.gif\" alt=\"Grounder\"/>" +
+                    "</div>" +
+                    
+                    "<hr/>" +
+
+                    "<div class='personal-item'>" +
+                        "Foot Grounding System developed using Animation Rigging Package, works for any Bipedal Charachter" +
+                    "</div>" +
+                    
+                "</div>" +
+            
+            "<div class='personal-content'>" +
+
+                    "<div class='personal-item'>" +
+                        "<b>A \"Perfect\" (Only one Path to Success | \"Hunt & Kill\") <br/> <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/MazeGenerator\">Procedural Maze Generator</a></b>" +
+                    "</div>" +
+        
+                    "<hr/>" +
+
+                    "<div class='personal-item'>" +
+                        "<img src=\"Maze.gif\" alt=\"Maze\"/>" +
+                    "</div>" +
+                    
+                    "<hr/>" +
+
+                    "<div class='personal-item'>" +
+                        "A Customizable Maze Generator, width, height and walls." +
+                    "</div>" +
+                    
+                "</div>" +
+            
             "<br/>" +
-                "<ul style='line-height: 250%'>" +
-                "<li>Realistic AAA <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Third-Person\">Character Controller</a></li>" +
-                "<li>Machine Learning <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/KartRacing\">Self Driving Car Simulation</a></li>" +
-                "<li>Machine Learning <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Gasha\">Short Range Missile Defense Simulation</a></li>" +
-                "<li>A Perfect (Only one Path to Success) <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/MazeGenerator\">Procedural Maze Generator</a></li>" +
-                "<li><a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Unity-UI\">User Interface Framework</a></li>" +
-                "<li><a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Grounder\">Procedural Bipedal Grounding System</a></li>" +
-                "<li><a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/CircuitRepair\">Circuit Repair Game</a></li>" +
-                "</ul>" +
+
+            "<div class='personal-content'>" +
+
+                "<div class='personal-item'>" +
+                    "<b>Game Jam Project <br/> <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/CircuitRepair\">Circuit Repair</a> Game</br></b>" +
+                "</div>" +
+    
+                "<hr/>" +
+    
+                "<div class='personal-item'>" +
+                    "<img src=\"CR.gif\" alt=\"Circuit Repair\"/>" +
+                "</div>" +
+    
+                "<hr/>" +
+    
+                "<div class='personal-item'>" +
+                    "A Puzzle Game where you have to arrange Logic Gates to output a specific value in to an outlet within a specific given time." +
+                "</div>" +
+
+            "</div>" +
+            
+            "<div class='personal-content'>" +
+
+                "<div class='personal-item'>" +
+                    "<b>Machine Learning <br/> <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/KartRacing\">Self Driving Car</a> Simulation</b>" +
+                "</div>" +
+    
+                "<hr/>" +
+    
+                "<div class='personal-item'>" +
+                    "<img src=\"Kart.gif\" alt=\"Kart Racing\"/>" +
+                "</div>" +
+    
+                "<hr/>" +
+    
+                "<div class='personal-item'>" +
+                    "A Self Driving Car made using Machine Learning Agents (ML-Agents) that can adjust and drive on any Track." +
+                "</div>" +
+
+            "</div>" +
+            
+            "<div class='personal-content'>" +
+
+                "<div class='personal-item'>" +
+                    "<b><a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Unity-UI\">User Interface Framework</a></b>" +
+                "</div>" +
+    
+                "<hr/>" +
+    
+                "<div class='personal-item'>" +
+                    "<img src=\"UI.gif\" alt=\"User Interface Framework\"/>" +
+                "</div>" +
+    
+                "<hr/>" +
+    
+                "<div class='personal-item'>" +
+                    "User Interface Framework for Unity, that supports transitions, Alerts and theme-ing." +
+                "</div>" +
+
+            "</div>" +
+                    
             "<br/>" +
-            "For more information please look at my <a class=\"marked\" target=\"_blank\" href=\"https://www.linkedin.com/in/robel-getnet-a64820165/\">LinkedIn profile</a>\n" +
+            "For more information please look at my <a class=\"marked\" target=\"_blank\" href=\"https://www.github.com/rob1997/\">GitHub profile</a><br/>" +
             "</ul>" +
             "</p>",
             
@@ -233,6 +375,7 @@
                     paragraph[index];
             }
         }
+        
     </script>
     <link rel="icon" href="Avatar.png">
 </head>
@@ -240,7 +383,7 @@
 <body onload="load()">
     <div id="container">
         <header id ="headers">
-            <img src="Avatar.png" alt="Picture" style="width: 14.85%; height: 15.12%;" 
+            <img id="top-img" src="Avatar.png" alt="Picture" style="width: 14.85%; height: 15.12%;"
                  onmouseover="this.src='Robel.png'" onmouseout="this.src='Avatar.png'">
             <h3> +-------------------------------+ <br/> 
                 | Robel Getnet | Game Developer |
