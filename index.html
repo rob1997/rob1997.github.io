@@ -1,411 +1,427 @@
-<html>
+<html lang="en">
 
 <head>
+    
     <title>
         Portfolio | Robel Getnet
     </title>
-    <style>
-        body {
-            background-color: #2c343f;
-            font-family: monospace;
-            
-            line-height: 175%;
-        }
-        
-        #container {
-            background-color: ghostwhite;
-            margin: auto;
-            width: 50%;
-            
-            padding: 5%;
-        }
-
-        #innerContainer
-        {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .marked {
-            background-color: #708090;
-            border-radius: 5px;
-            padding: 5px;
-
-            font-weight: bold;
-            
-            color: white;
-            font-family: monospace;
-            text-decoration: none;
-        }
-
-        .marked:hover, 
-        .marked:focus
-        {
-            background-color: #2F4F4F;
-        }
-        
-        .personal-content {
-            
-            width: 28%;
-            
-            padding: 0;
-            margin: 15px;
-
-            display: inline-block;
-        }
-        
-        .personal-item {
-            margin: 0;
-            padding: 0;
-            
-            width: -moz-fit-content;
-            width: fit-content;
-            
-            word-break: break-word;
-        }
-        
-        .personal-content img {
-            width: 100%;
-        }
-        
-        .bottom
-        {
-            margin: auto;
-            
-            font-weight: bolder;
-            font-size: 16px;
-            
-            text-align: center;
-        }
-
-        header img {
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        
-        p img {
-            border: 4px solid black;
-            border-radius: 10px;
-            
-            width: 25%;
-            height: 15%;
-            object-fit: cover;
-        }
-        
-        hr {
-            margin: 5%;
-        }
-        
-        p {
-            font-family: monospace;
-            width: 105%;
-        }
-        
-        div {
-            padding: 10%;
-        }
-
-        div h1 {
-            background-color: #3498DB;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            
-            border-radius: 10px;
-        }
-
-        /* Dropdown button on hover & focus */
-        div h1:hover,
-        div h1:focus {
-            background-color: #2980B9;
-        }
-
-    </style>
-
-    <script>
-
-        var title = [
-            "PROFILE",
-            "SKILLS",
-            "EXPERIENCE",
-            "MY PROJECTS",
-            "BADGES & CERTIFICATES",
-            "EDUCATION",
-            "CONCLUSION",
-            "ADDITIONAL SKILLS & INTERESTS"
-            ];
-
-        var paragraph = [
-            "<p>Hi, I’m Robel, a Game Developer with almost 4 years of professional Game Development experience.\n" +
-            "I’ve worked on several Game Development Projects (2D, 3D, Multiplayer and Singleplayer) on the\n" +
-            "Unity Game Engine with roles such as Gameplay Programmer, Tools Developer and User Interface\n" +
-            "Programmer.\n</p>",
-            
-            "<p><ol>" +
-            "<b><li>Unity Game Engine</li></b><br/>" +
-            "<ul>" +
-            "<li>Gameplay Programming</li>" +
-            "<li>User Interface Programming</li>" +
-            "<li>Tools Programming</li>" +
-            "<li>Multiplayer Programming</li>" +
-            "<li>ECS (Entity Component System)</li>" +
-            "<li>Addressables</li>" +
-            "<li>Editor Scripting</li>" +
-            "<li>SDK and Package Development</li>" +
-            "<li>Machine Learning Agents</li>" +
-            "<li>Procedural Level and Animation generation</li>" +
-            "</ul>" +
-            "<br/><b><li>Version Control (Git & Plastic SCM) and Agile (SCRUM)</li></b><br/>" +
-            "<b><li>Firestore and/or REST API</li></b><br/>" +
-            "I’m skilled in using Firestore (Firebase’s Realtime Database solution) or a REST API for<br/>" +
-            "developing Games."
-            + "</ol></p>",
-            
-            "<p>" +
-            "<ul>" +
-            "<b><li><a class=\"marked\" target=\"_blank\" href=\"https://qenetech.com/\">Qene Technologies</a> | Gameplay Developer | Apr 2020 - Aug 2020</li></b><br/>" +
-            "I participated in developing an " +
-            "<a class=\"marked\" target=\"_blank\" href=\"https://gamesindustryafrica.com/2020/12/14/gebeta-nominated-for-app-of-the-year-award/\">Award Winning</a> digital adoption of an infamous African board\n" +
-            "game called <a class=\"marked\" target=\"_blank\" href=\"https://play.google.com/store/apps/details?id=com.qenetech.gebeta&hl=en\">Gebeta/Manchala</a> (over 10k+ downloads).<br/>" +
-            "<br/>" +
-
-            "<p>" +
-                "<img src=\"Gebeta.gif\" alt=\"Gebeta\"/>" +
-                "&nbsp;" +
-                "<img src=\"Gebeta_2.png\" alt=\"Gebeta\"/>" +
-            "</p>" +
-            
-            "<b><li><a class=\"marked\" target=\"_blank\" href=\"https://www.excellerentsolutions.com/\">Excellerent Solutions</a> | Gameplay, Tools and User Interface Programmer | Apr 2020 - Jun 2022</li></b><br/>" +
-            "I was involved in developing a Competitive Mobile Multiplayer called <a class=\"marked\" target=\"_blank\" href=\"https://textracing.com/\">Text Racing</a> that uses\n" +
-            "cryptocurrency.<br/>" +
-
-            "<p>" +
-            "<img src=\"TextRacing_1.jpg\" alt=\"Text Racing\"/>" +
-            "&nbsp;" +
-            "<img src=\"TextRacing_2.jpg\" alt=\"Text Racing\"/>" +
-            "&nbsp;" +
-            "<img src=\"TextRacing_3.jpg\" alt=\"Text Racing\"/>" +
-            "</p>" +
-                    
-            "<br/><b><li><a class=\"marked\" target=\"_blank\" href=\"https://catheongaming.com/\">Catheon Gaming</a> | Game Tools Developer | Jun 2022 - Oct 2022</li></b><br/>" +
-            "I worked on a Popular Cross-Platform Turn Based Cross-Platform Mobile Multiplayer called\n" +
-            "<a class=\"marked\" target=\"_blank\" href=\"https://angrymals.io/\">AngryMals</a> (over 100k+ downloads) as Tools Developer.<br/>" +
-            
-            "<p>" +
-                "<img src=\"AngryMals.gif\" alt=\"AngryMals\"/>" +
-                "&nbsp;" +
-                "<img src=\"AngryMals_2.png\" alt=\"AngryMals\"/>" +
-            "</p>" +
-            
-            "<b><li>Freelance | Upwork | Aug 2021 - Present</li></b><br/>" +
-            "I've developed and delivered various projects and prototypes ranging from character\n" +
-            "controllers to machine learning agents. So far I’ve a 100% job success rate and a 5 star\n" +
-            "rating freelancing on my <a class=\"marked\" target=\"_blank\" href=\"https://www.upwork.com/freelancers/~019ca6d83e3185007d\">Upwork Profile</a>\n<br/>" +
-
-            "<br/>For more information please look at my <a class=\"marked\" target=\"_blank\" href=\"https://www.linkedin.com/in/robel-getnet-a64820165/\">LinkedIn profile</a><br/>",
-                    
-            "In my free time I’m constantly learning new and more efficient programming methods and\n" +
-            "curating tools for future developments. I maintain most of my personal projects on my\n" +
-            "<a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997\">GitHub Profile</a>\n" + 
-            "<br/>"+
-            "<br/>Some noteworthy works include<br/>" +
-                    
-            "<div class='personal-content'>" +
-
-                "<div class='personal-item'>" +
-                    "<b><a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Controller\">Character Controller</a></b>" +
-                        "</div>" +
-            
-                            "<hr/>" +
-                
-                            "<div class='personal-item'>" +
-                                "<img src=\"Controller_1.gif\" alt=\"Controller\"/>" +
-                            "</div>" +
-                
-                            "<hr/>" +
-            
-                        "<div class='personal-item'>" +
-                    "A Modular Third Person Shooter Controller with Locomotion, Damage, Inventory and Weapons Implemented" +
-                "</div>" +
-                    
-            "</div>" +
-            
-            "<div class='personal-content'>" +
-
-                    "<div class='personal-item'>" +
-                        
-                    "<b>Procedural Bipedal <br/> <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Grounder\">Grounding System</a></br></b>" +
-                    "</div>" +
-        
-                    "<hr/>" +
-
-                    "<div class='personal-item'>" +
-                        "<img src=\"Grounder.gif\" alt=\"Grounder\"/>" +
-                    "</div>" +
-                    
-                    "<hr/>" +
-
-                    "<div class='personal-item'>" +
-                        "Foot Grounding System developed using Animation Rigging Package, works for any Bipedal Charachter" +
-                    "</div>" +
-                    
-                "</div>" +
-            
-            "<div class='personal-content'>" +
-
-                    "<div class='personal-item'>" +
-                        "<b>A \"Perfect\" (Only one Path to Success | \"Hunt & Kill\") <br/> <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/MazeGenerator\">Procedural Maze Generator</a></b>" +
-                    "</div>" +
-        
-                    "<hr/>" +
-
-                    "<div class='personal-item'>" +
-                        "<img src=\"Maze.gif\" alt=\"Maze\"/>" +
-                    "</div>" +
-                    
-                    "<hr/>" +
-
-                    "<div class='personal-item'>" +
-                        "A Customizable Maze Generator, width, height and walls." +
-                    "</div>" +
-                    
-                "</div>" +
-            
-            "<br/>" +
-
-            "<div class='personal-content'>" +
-
-                "<div class='personal-item'>" +
-                    "<b>Game Jam Project <br/> <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/CircuitRepair\">Circuit Repair</a> Game</br></b>" +
-                "</div>" +
     
-                "<hr/>" +
-    
-                "<div class='personal-item'>" +
-                    "<img src=\"CR.gif\" alt=\"Circuit Repair\"/>" +
-                "</div>" +
-    
-                "<hr/>" +
-    
-                "<div class='personal-item'>" +
-                    "A Puzzle Game where you have to arrange Logic Gates to output a specific value in to an outlet within a specific given time." +
-                "</div>" +
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" href="Images/Avatar.png">
 
-            "</div>" +
-            
-            "<div class='personal-content'>" +
-
-                "<div class='personal-item'>" +
-                    "<b>Machine Learning <br/> <a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/KartRacing\">Self Driving Car</a> Simulation</b>" +
-                "</div>" +
-    
-                "<hr/>" +
-    
-                "<div class='personal-item'>" +
-                    "<img src=\"Kart.gif\" alt=\"Kart Racing\"/>" +
-                "</div>" +
-    
-                "<hr/>" +
-    
-                "<div class='personal-item'>" +
-                    "A Self Driving Car made using Machine Learning Agents (ML-Agents) that can adjust and drive on any Track." +
-                "</div>" +
-
-            "</div>" +
-            
-            "<div class='personal-content'>" +
-
-                "<div class='personal-item'>" +
-                    "<b><a class=\"marked\" target=\"_blank\" href=\"https://github.com/rob1997/Unity-UI\">User Interface Framework</a></b>" +
-                "</div>" +
-    
-                "<hr/>" +
-    
-                "<div class='personal-item'>" +
-                    "<img src=\"UI.gif\" alt=\"User Interface Framework\"/>" +
-                "</div>" +
-    
-                "<hr/>" +
-    
-                "<div class='personal-item'>" +
-                    "User Interface Framework for Unity, that supports transitions, Alerts and theme-ing." +
-                "</div>" +
-
-            "</div>" +
-                    
-            "<br/>" +
-            "For more information please look at my <a class=\"marked\" target=\"_blank\" href=\"https://www.github.com/rob1997/\">GitHub profile</a><br/>" +
-            "</ul>" +
-            "</p>",
-            
-            "<a class=\"marked\" target=\"_blank\" href=\"https://app.pluralsight.com/profile/robel-getnet\">Unity Game Development Courses: Programming Expert</a> | Pluralsight I was graded in the 100th\n" +
-            "percentile (top 1%) of those who took the test.",
-            
-            "BSC Software Engineering\n" +
-            "September 2015 – 2020 | <a class=\"marked\" target=\"_blank\" href=\"http://www.aau.edu.et/\">Addis Ababa University</a>",
-            
-            "In conclusion I would like to state I’m diligent, friendly, creative and always ready to learn more.\n" +
-            "Beyond my considerable amount of programming skill and experience, I would also like to consider\n" +
-            "myself a very quick learner.\n",
-            
-            "Can speak confidently and proficiently in English.\n" +
-            "An accomplished Gamer and " +
-            "<br/>Proud owner of the <a class=\"marked\" target=\"_blank\" href=\"https://www.playstationtrophies.org/game/god-of-war-2018/trophy/217652-chooser-of-the-slain.html\">" +
-            "Chooser of The Slain Trophy</a> on PS4 :)"
-        ];
-
-        function load() {
-            for (var i = 0; i < title.length; i++) {
-                document.getElementById("innerContainer").innerHTML += "<h1 onclick=\"show(" + i + ")\">" + title[i] + "</h1><p id=\"" + title[i] +"\"></p>";
-
-            }
-        }
-
-        function show(index) {
-                
-                if (document.getElementById(title[index]).innerHTML !==
-                "") {
-                document.getElementById(title[index]).innerHTML =
-                    "";
-            }
-            else {
-                document.getElementById(title[index]).innerHTML =
-                    paragraph[index];
-            }
-        }
-        
-    </script>
-    <link rel="icon" href="Avatar.png">
 </head>
 
-<body onload="load()">
-    <div id="container">
-        <header id ="headers">
-            <img id="top-img" src="Avatar.png" alt="Picture" style="width: 14.85%; height: 15.12%;"
-                 onmouseover="this.src='Robel.png'" onmouseout="this.src='Avatar.png'">
-            <h3> +-------------------------------+ <br/> 
-                | Robel Getnet | Game Developer |
-                <br/> +-------------------------------+ </h3>
-            <h3>✉ robelgetnetrg@gmail.com</h3>
+<body>
+
+<header>
+    
+    <nav id="top-nav">
+        <button id="profile-btn" class="nav-btn" onclick="scrollToView('profile')">PROFILE</button>
+        <button id="skills-btn" class="nav-btn" onclick="scrollToView('skills')">SKILLS</button>
+        <button id="experience-btn" class="nav-btn" onclick="scrollToView('experience')">EXPERIENCE</button>
+        <button id="my-projects-btn" class="nav-btn" onclick="scrollToView('my-projects')">MY PROJECTS</button>
+        <button id="education-btn" class="nav-btn" onclick="scrollToView('education')">EDUCATION & CERTIFICATES</button>
+        <button id="additional-btn" class="nav-btn" onclick="scrollToView('additional')">ADDITIONAL SKILLS</button>
+        <button id="conclusion-btn" class="nav-btn" onclick="scrollToView('conclusion')">CONCLUSION</button>
+        <a href="javascript: invert()"><img id="dark-mode-img" alt="dark mode" src="Images/dark_mode.png"/></a>
+    </nav>
+    
+</header>
+
+<div id="container">
+
+    <div id="nav-holder"></div>
+    
+    <hr class="mid-line"/>
+    
+    <div id="profile" class="section-div">
+
+        <img id="top-img" src="Images/Avatar.png" alt="Picture" style="width: 14.85%; height: 15.12%;"
+             onmouseover="this.src='Images/Robel.png'" onmouseout="this.src='Images/Avatar.png'">
+
+        <div id="basic-info">
+            <h3>
+                +-------------------------------+ <br/>
+                | Robel Getnet | Game Developer | <br/>
+                +-------------------------------+
+            </h3>
+            <h3><a id="mail-link" href="mailto: robelgetnetrg@gmail.com">✉ robelgetnetrg@gmail.com</a></h3>
             <h3><a class="marked" target="_blank" href="https://www.linkedin.com/in/robel-getnet-a64820165/">LinkedIn</a></h3>
             <h3><a class="marked" target="_blank" href="https://github.com/rob1997">GitHub</a></h3>
-        </header>
-
-        <b style="text-align: center"><<< --------------------------------------------------------------------------------------------- >>></b>
-
-        <div id="innerContainer">
-        
         </div>
-        <div class="bottom">
-            Thank you for your time and consideration!
-            <br/>
-            Muchas Gracias!
-            <br/>
-            አመሰግናለው
-        </div>
+
+        <p id="basic-intro">
+            Hi <span id="wave-emoji">👋</span> I’m Robel, a Game Developer based in East Africa working professionally since 2019 and remotely since 2020. 
+            What makes me passionate about games is the combination of technology and imagination to create an interactive experience and tell a story. 
+            I’ve worked on several Game Development Projects including 2D, 3D, Multiplayer and Singleplayer on the Unity Game Engine with roles such as Gameplay 
+            Programmer, Tools Developer and User Interface Programmer. 
+            I've contributed to three shipped mobile (cross-platform/IOS and Android) titles, one award winning. 
+            I'm also experienced in the Agile/Scrum methodology for development together with version control platforms such as Git and Plastic SCM 
+            for collaborative work in large remote teams.
+        </p>
+
     </div>
+
+    <hr class="mid-line"/>
+
+    <div id="skills" class="section-div">
+        <ol>
+            <li><b>Unity Game Engine</b></li>
+
+            within Unity I'm skilled with the following
+            
+            <ul>
+                <li>User Interface</li>
+                <li>Tools</li>
+                <li>Multiplayer</li>
+                <li>ECS (Entity Component System)</li>
+                <li>Addressables</li>
+                <li>Editor Scripting</li>
+                <li>SDK and Package Development</li>
+                <li>Machine Learning Agents</li>
+                <li>Procedural Level and Animation generation</li>
+            </ul>
+            
+            and more...
+
+            <li><b>Version Control (Git & Plastic SCM) and Agile (SCRUM) Methodology</b></li>
+            I've Version Control and Agile skills that are crucial for collaborative remote development.
+            <li><b>Firebase and/or REST API</b></li>
+            I'm proficient in Firebase's Realtime Database solution for multiplayer implementations and online communications among players. 
+            I'm also skilled in utilizing FCM/Firebase Cloud Messaging and APN/Apple Push Notifications Services for cross-platform mobile notifications.
+            I've also worked with REST APIs to authenticate/authorize players and to create, read, update and delete player data.
+        </ol>
+    </div>
+
+    <hr class="mid-line"/>
+    
+    <div id="experience" class="section-div">
+        
+        <ul>
+            <li class="experience-item">
+                <b>
+                    <a class="marked" target="_blank" href="https://qenetech.com/">Qene Technologies</a> | Game UI and Tools Developer | Apr 2020 - Aug 2020
+                </b>
+            </li>
+
+            I contributed in the development of an <a class="marked" target="_blank" href="https://gamesindustryafrica.com/2020/12/14/gebeta-nominated-for-app-of-the-year-award/">Award Winning</a> digital adoption of an infamous African board game called
+            <a class="marked" target="_blank" href="https://play.google.com/store/apps/details?id=com.qenegames.gebeta">Gebeta/Manchala</a>.
+
+            <br/>
+            
+            <img class="showcase-display" src="Images/Gebeta.gif" alt="Gebeta"/>
+            
+            <img class="showcase-display" src="Images/Gebeta_2.png" alt="Gebeta"/>
+
+            <br/>
+            
+            Some of the skills I gained and utilized while working on <b>Gebeta</b> include UI Programming, Tooling, Editor Scripting, Firebase, Git and Jira. 
+            Gebeta is published on both AppStore and PlayStore with over 50K downloads on Android alone. It was acquired by a popular game publisher called Carry 1st in the first quarter of 2023.
+            
+            <li class="experience-item">
+                <b>
+                    <a class="marked" target="_blank" href="https://www.excellerentsolutions.com/">Excellerent Solutions</a> | Gameplay, Tools and UI Programmer | Apr 2020 - Jun 2022 
+                </b>
+            </li>
+
+            I contributed in developing a Competitive Play to Earn, Cross Platform, Real-time Mobile Multiplayer called <a class="marked" target="_blank" href="https://textracing.com/">Text Racing</a> 
+            that utilizes players' Typing and Trivia skills to earn Cryptocurrency.
+
+            <br/>
+
+            <img class="showcase-display" src="Images/TextRacing_1.jpg" alt="Text Racing"/>
+
+            <img class="showcase-display" src="Images/TextRacing_2.jpg" alt="Text Racing"/>
+
+            <img class="showcase-display" src="Images/TextRacing_3.jpg" alt="Text Racing"/>
+            
+            <br/>
+
+            I participated in Text Racing's development, from conception up until production as a Game-play Programmer, Game UI Programmer, Tools Programmer, and Acting Tech/Dev Lead for a team of five.
+            Some of my tasks and responsibilities included
+            
+            <ul>
+                <li>Handling parts of Project Management and Client Communications as a Generalist and followed Agile/SCRUM methodology for development.</li>
+                <li>Utilizing an open-source Entity Component System called Entitas for development, which enabled multithreading within Unity, boosting performance on mobile devices, and targeting a larger audience (device group).</li>
+                <li>Implementing a Cryptocurrency wallet management system built into the Game, enabling players to create, save, backup, replace, and remove an encrypted wallet on the device.</li>
+                <li>Developing a custom Unity UI Framework that extended Unity's own UI, incorporating extra functionalities, which allowed the team to iterate and increment much faster.</li>
+                <li>Utilizing Git and GitHub for Version Control and Collaboration remotely</li>
+            </ul>
+
+            Text Racing is in Beta Phase of development.
+            
+            <li class="experience-item">
+                <b>
+                    <a class="marked" target="_blank" href="https://catheongaming.com/">Catheon Gaming</a> | Game Tools Developer | Jun 2022 - Oct 2022
+                </b>
+            </li>
+
+            I worked on the development of a popular 2D turn-based Free to Play Multiplayer called <a class="marked" target="_blank" href="https://angrymals.io/">AngryMals</a> as Game Tools Developer.
+            
+            <br/>
+
+            <img style="width: 3.5in" class="showcase-display" src="Images/AngryMals.gif" alt="AngryMals"/>
+            
+            <img class="showcase-display" src="Images/AngryMals_2.png" alt="AngryMals"/>
+
+            <br/>
+
+            I primarily participated in Game Tools Development, creating various tools to improve the user experience of the game and optimize development iteration.
+            I implemented the following tools for Angrymals
+            <ul>
+                <li>A Safe Area Rect Display tool to fix game view being obstructed by mobile screen boundaries or notches during production/build.</li>
+                <li>A Mobile Notifications tool that utilizes Firebase Cloud Messaging, platform-specific compilation (Native Java Android Plugins), and Apple Push Notification services to deliver normal and push notifications to players.</li>
+                <li>A persistent Scripting Symbol Editor tool for adding/removing and resetting scripting symbols for all specific platforms, applying them in the editor during startup and when the project loads initially.</li>
+            </ul>
+
+            The team utilized Plastic SCM for Version Control and Collaboration. Angrymals is released on Mobile, both platforms (Android and iOS), with over 100k downloads on android alone.
+
+            <li class="experience-item">
+                <b>
+                    Freelance | Upwork | Apr 2021 - Jan 2022
+                </b>
+            </li>
+
+            I've developed and delivered various projects and prototypes utilizing Unity Game Engine as a freelance Game Developer, maintaining a 100% job 
+            success rate and a 5-star rating on my <a class="marked" target="_blank" href="https://www.upwork.com/freelancers/~019ca6d83e3185007d">Upwork Profile</a>.
+            While freelancing I developed the following projects
+            
+            <ul>
+                <li>A basic Battleship type of AI game on Unity using Unity's Machine Learning solution called ML Agents, utilizing Reinforcement Learning for training AI agents.</li>
+                <li>A starter Football/Soccer controller for Unity 3D, enabling players to dribble and switch possession of a soccer ball without any animations, strictly using physics.</li>
+                <li>A third-person Fish Controller allowing fish to traverse in 3D space using touch controls on mobile, with blended movement animations triggered from player actions.</li>
+            </ul>
+
+            I Utilized Git and GitHub for Version Control.
+            
+        </ul>
+        
+    </div>
+
+    <hr class="mid-line"/>
+    
+    <div id="my-projects" class="section-div">
+
+        In my free time I’m constantly learning new and more efficient programming methods and curating tools for future developments. I maintain most of my personal projects on my
+        <a class="marked" target="_blank" href="https://github.com/rob1997">GitHub Profile</a>. Some noteworthy works include
+        
+        <br/>
+
+        <div id="projects-content">
+
+            <div class='personal-content'>
+
+                <div>
+                    <b><a class="marked" target="_blank" href="https://github.com/rob1997/Controller">Character Controller</a></b>
+                </div>
+
+                <hr/>
+
+                <img class="showcase-display" src="Images/Controller_1.gif" alt="Controller"/>
+
+                <hr/>
+
+                <div>
+                    A Modular Third Person Shooter Controller with Locomotion, Damage, Inventory and Weapons Systems Implemented.
+                </div>
+
+            </div>
+
+            <div class='personal-content'>
+
+                <div>
+
+                    <b>Procedural Bipedal
+
+                        <br/>
+
+                        <a class="marked" target="_blank" href="https://github.com/rob1997/Grounder">Grounding System</a></b>
+                </div>
+
+                <hr/>
+
+                <img class="showcase-display" src="Images/Grounder.gif" alt="Grounder"/>
+
+                <hr/>
+
+                <div>
+                    A Foot Grounding System developed using Unity's Animation Rigging Package that works for any Bipedal Character.
+                </div>
+
+            </div>
+
+            <div class='personal-content'>
+
+                <div>
+                    <b>A "Perfect" (Only one Path to Success | "Hunt & Kill")
+
+                        <br/>
+
+                        <a class="marked" target="_blank" href="https://github.com/rob1997/MazeGenerator">Procedural Maze Generator</a></b>
+                </div>
+
+                <hr/>
+
+                <img class="showcase-display" src="Images/Maze.gif" alt="Maze"/>
+
+                <hr/>
+
+                <div>
+                    A Maze Generator that uses the "Hunt & Kill" algorithm with customizable width, height and walls.
+                </div>
+
+            </div>
+
+            <br/>
+
+            <div class='personal-content'>
+
+                <div>
+                    <b>Game Jam Project
+
+                        <br/>
+
+                        <a class="marked" target="_blank" href="https://github.com/rob1997/CircuitRepair">Circuit Repair</a> Game</b>
+                </div>
+
+                <hr/>
+
+                <img class="showcase-display" src="Images/CR.gif" alt="Circuit Repair"/>
+
+                <hr/>
+
+                <div>
+                    A Puzzle Game where you have to arrange Logic Gates to output a specific value in to an outlet within a specific given time.
+                </div>
+
+            </div>
+
+            <div class='personal-content'>
+
+                <div>
+                    <b>Machine Learning
+
+                        <br/>
+
+                        <a class="marked" target="_blank" href="https://github.com/rob1997/KartRacing">Self Driving Car</a> Simulation</b>
+                </div>
+
+                <hr/>
+
+                <img class="showcase-display" src="Images/Kart.gif" alt="Kart Racing"/>
+
+                <hr/>
+
+                <div>
+                    A Self Driving Car implemented using Machine Learning Agents (ML-Agents) that can be trained to adjust and drive on any Track/Terrain.
+                </div>
+
+            </div>
+
+            <div class='personal-content'>
+
+                <div>
+                    <b><a class="marked" target="_blank" href="https://github.com/rob1997/Unity-UI">User Interface Framework</a></b>
+                </div>
+
+                <hr/>
+
+                <img class="showcase-display" src="Images/UI.gif" alt="User Interface Framework"/>
+
+                <hr/>
+
+                <div>
+                    UI Framework extending Unity's base UI functions to support transitions, Alerts, theme-ing and more.
+                </div>
+
+            </div>
+            
+        </div>
+
+        <br/>
+        
+    </div>
+
+    <hr class="mid-line"/>
+
+    <div id="education" class="section-div">
+
+        <p>
+            BSC <b>Software Engineering</b>
+            September 2015 – 2020 | From <a class="marked" target="_blank" href="http://www.aau.edu.et/">Addis Ababa University</a> | With Distinction.
+        </p>
+    
+        <p>
+            <a class="marked" target="_blank" href="https://app.pluralsight.com/profile/robel-getnet">Unity Game Development Courses: Programming Expert</a> | Pluralsight I was graded in the 99th
+            percentile (top 1%) of those who took the test in 2019.
+        </p>
+        
+    </div>
+    
+    <hr class="mid-line"/>
+
+    <div id="additional" class="section-div">
+
+        <ul>
+            <li><b>Language</b> - I can speak confidently and proficiently in English to collaborate remotely with ease. I'm a native Amharic speaker.</li>
+            <li><b>Game Design</b> - I have beginner level Game Design knowledge and experience gained through personal projects, Game Jams and interactions with other desginers.</li>
+            <li><b>Soft Skills</b> - a combination of people skills, social skills, communication skills, emotional intelligence, and 
+                personality traits that make it easy to get along and work harmoniously with my colleagues.</li>
+            <li><b>Web Development</b> - I have Junior Web Development Skills, both front and back-end.</li>
+            <li><b>Blockchain/Web3</b> - I'm a blockchain, cryptocurrency and web3 enthusiast. I'm familiar to them on an abstract level.</li>
+        </ul>
+        
+        I'm also an accomplished/avid Gamer and proud owner of the <a class="marked" target="_blank" href="https://www.playstationtrophies.org/game/god-of-war-2018/trophy/217652-chooser-of-the-slain.html">
+        Chooser of The Slain Trophy</a> on PS4 :)
+        
+    </div>
+
+    <hr class="mid-line"/>
+
+    <div id="conclusion" class="section-div">
+
+        <p>
+            In conclusion, I am confident that my skills, experience, and passion for games makes me a competent and proficient Game Developer.
+            Through my portfolio, I hope I have conveyed my dedication to the craft, my technical knowledge, and my ability to collaborate with teams to deliver
+            high-quality solutions.
+        </p>
+
+        <p>
+            I would also like to state I’m diligent, friendly, creative and always ready to learn more.
+            Beyond my considerable amount of programming skills and experience, I would also like to consider
+            myself a very quick learner.
+        </p>
+        
+        <p>
+            Some of my favorite games include <b>The Witcher 3 - Wild Hunt</b>, <b>The Last of Us</b>, <b>Limbo</b> and <b>Hollow Knight</b>. I'm a Game Developer because of how these and
+            many other games have Impacted me positively in my life and I would like to impact others similarly through my work!
+        </p>
+        
+    </div>
+    
+</div>
+
+<div>
+    <div class="bottom">
+        <span style="float: left">+</span>-----------------------------------------<span style="float: right">+</span>
+        <br/>
+        <span style="float: left">|&nbsp;</span> Thank you for your time and consideration! <span style="float: right">&nbsp;|</span>
+        <br/>
+        <span style="float: left">|&nbsp;</span> Muchas Gracias! <span style="float: right">&nbsp;|</span>
+        <br/>
+        <span style="float: left">|&nbsp;</span> አመሰግናለው <span style="float: right">&nbsp;|</span>
+        <br/>
+        <span style="float: left">|&nbsp;</span> (◕‿◕) <span style="float: right">&nbsp;|</span>
+        <br/>
+        <span style="float: left">+</span>-----------------------------------------<span style="float: right">+</span>
+    </div>
+</div>
+
+<footer>
+    <b>To contact me, my Email, LinkedIn and GitHub are linked at the <a class="marked" href="javascript:scrollToView('profile')">Top</a>.</b>
+</footer>
+
 </body>
 
 </html>

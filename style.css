@@ -1,0 +1,175 @@
+body {
+    font-family: monospace;
+    line-height: 200%;
+    margin-top: 0;
+    background-color: white;
+}
+
+nav {
+    width: 100%;
+
+    position: fixed;
+    overflow: hidden;
+
+    background-color: white;
+}
+
+.nav-btn {
+    padding: 16px;
+
+    background-color: #8421de;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: monospace;
+    border: none;
+    cursor: pointer;
+
+    border-radius: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.nav-btn:hover
+{
+    background-color: #9532ef;
+}
+
+#dark-mode-img
+{
+    float: right;
+    object-fit: scale-down;
+    
+    margin-right: 1.5%;
+    margin-top: 0.5%;
+    
+    width: 35px;
+}
+
+#top-nav
+{
+    z-index: 1;
+}
+
+.marked {
+    background-color: #ef104b;
+    border-radius: 5px;
+    padding: 5px;
+
+    font-weight: bold;
+
+    color: white;
+    font-family: monospace;
+    text-decoration: none;
+}
+
+.marked:hover,
+.marked:focus
+{
+    background-color: #ff426d;
+}
+
+#top-img {
+    object-fit: scale-down;
+    float: left;
+}
+
+#basic-info {
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+#basic-intro
+{
+    clear: both;
+}
+
+#mail-link
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.experience-item
+{
+    padding-top: 1.5%;
+    padding-bottom: 0.75%;
+}
+
+#projects-content
+{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.personal-content {
+
+    max-width: 3.5in;
+
+    padding: 0;
+    margin: 2.5%;
+
+    display: inline-block;
+}
+
+.personal-content .showcase-display
+{
+    width: 100%;
+}
+
+.personal-item {
+    margin: 0;
+    padding: 0;
+}
+
+.mid-line
+{
+    border: 1px dashed;
+    border-radius: 5px;
+}
+
+.section-div {
+    padding: 0 0 0 2.5%;
+    margin: 0 auto;
+}
+
+.showcase-display {
+    border: 4px solid black;
+    border-radius: 10px;
+    
+    max-width: 3.5in;
+    
+    margin: 1.5%;
+    
+    object-fit: cover;
+}
+
+
+#smile {
+    font-size: larger;
+}
+
+.bottom
+{
+    margin: 5% auto 7.5%;
+    padding: 0;
+
+    font-weight: bolder;
+    font-size: larger;
+
+    line-height: 250%;
+
+    width:  fit-content;
+    height:  fit-content;
+
+    text-align: center;
+}
+
+footer {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5%;
+    font-size: larger;
+}
